@@ -225,7 +225,7 @@ def transfer(dict):
         sql2 = 'update user set 存款余额 = %s where 账号 = %s'
         data3 = select(sql, dict['账号2'], 'all')
         update(sql1, [data1[0][7]-dict['转账金额'],dict['账号1']])
-        update(sql1, [data3[0][7]+dict['转账金额'],dict['账号2']])
+        update(sql2, [data3[0][7]+dict['转账金额'],dict['账号2']])
         return 0
 
 # 查询
